@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1〜39くじ</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 100px; }
+    button { font-size: 20px; padding: 10px 20px; margin-top: 20px; }
+    #result { font-size: 60px; margin-top: 20px; color: #007bff; }
+  </style>
+</head>
+<body>
+  <h1>1から39のくじ</h1>
+  <button onclick="drawLottery()">くじを引く</button>
+  <div id="result">?</div>
+
+  <script>
+    function drawLottery() {
+      const number = Math.floor(Math.random() * 39) + 1;
+      document.getElementById("result").textContent = number;
+    }
+  </script>
+</body>
+</html>
